@@ -54,18 +54,26 @@
     .blog-card:hover {
       transform: translateY(-5px);
     }
-/* NAV */
-    nav {
-      position: fixed;
-      inset: 0 0 auto;
-      z-index: 200;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1.1rem var(--px);
-      background: rgba(250,248,245,0.88);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border);}
+
+    .nav {
+<nav>
+  <a href="index.html" class="logo">Sandali<em>.</em></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="ham" id="ham" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="drawer" id="drawer">
+  <a href="index.html">Home</a>
+  <a href="blog.html" class="active">Blog</a>
+  <a href="contact.html">Contact</a>
+</div>
+    }
     
     .logo, .nav-links a, h1, h2, .b-title { color: var(--text) !important; }
     .logo span, .nav-links a.active { color: var(--accent) !important; }
@@ -165,6 +173,7 @@
     </div>
   </div>
 </footer>
+
 <script src="script.js"></script>
 </body>
 </html>
