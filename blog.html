@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog — Sandali</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>V</text></svg>"/>
+
+  <style>
+    :root {
+      --bg:        #faf8f5;
+      --bg2:       #f2ede6;
+      --bg3:       #ebe4d9;
+      --text:      #1c1915;
+      --accent:    #9b6f3b;
+      --muted:     #7a6f62;
+      --border:    rgba(155,111,59,0.18);
+      --tag-bg:    rgba(255,255,255,0.75);
+      --accent-light:   rgba(155,111,59,0.1);
+      --accent-hover:   #7a5830;
+    }
+
+    body  { background-color: var(--bg) !important; color: var(--text) !important; }
+    nav   { background: rgba(250,248,245,0.88) !important; border-bottom: 1px solid var(--border) !important; }
+    .logo, .nav-links a, h1, h2, .b-title { color: var(--text) !important; }
+    .logo span, .nav-links a.active { color: var(--accent) !important; }
+    .pill { background: rgba(155,111,59,0.1) !important; color: var(--accent) !important; border: 1px solid var(--border) !important; }
+    .blog-card { background: var(--bg2) !important; border: 1px solid var(--border) !important; color: var(--text) !important; }
+    .bt1 { background: linear-gradient(135deg,#e8d9c5,#d6c4a8) !important; }
+    .bt2 { background: linear-gradient(135deg,#e8d5c4,#d6bfa8) !important; }
+    .bt3 { background: linear-gradient(135deg,#d9e0c5,#c4cfa8) !important; }
+    .blog-thumb { background: var(--bg3) !important; }
+    .tag, .ext-btn { background: var(--tag-bg) !important; color: var(--accent) !important; border: 1px solid var(--border) !important; }
+    .b-excerpt, .b-meta, p { color: var(--muted) !important; }
+    .blob { opacity: 0.12 !important; }
+    .view-all a { color: var(--accent) !important; }
+    .view-all a:hover { color: var(--accent-hover) !important; }
+    footer { border-top: 1px solid var(--border) !important; color: var(--muted) !important; }
+  </style>
+</head>
+<body>
+
+<div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
+
+<nav>
+  <a href="index.html" class="logo">Sandali<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-nav">
+  <a href="index.html">Home</a>
+  <a href="blog.html" class="active">Blog</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<section class="blog-hero">
+  <div class="container">
+    <div class="fade" style="margin-bottom:20px">
+      <span class="pill">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+          <path d="M3 10h10M3 6h6M3 13h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+        Published on Medium
+      </span>
+    </div>
+    <h1 class="fade">My Blog</h1>
+    <p class="fade">Thoughts on technology, management, and my journey as an undergraduate.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="blog-grid">
+
+      <!-- Card 1 -->
+      <a href="https://medium.com/@sandalih48/mastering-layouts-with-css-grid-28b248578822"
+         target="_blank" rel="noopener" class="card blog-card fade">
+        <div class="blog-thumb">
+          <div class="blog-thumb-inner bt1">🎨</div>
+          <span class="ext-btn" title="Open on Medium">↗</span>
+        </div>
+        <div class="blog-body">
+          <div class="tags">
+            <span class="tag">CSS</span>
+            <span class="tag">Web Design</span>
+          </div>
+          <h2 class="b-title">Mastering Layouts with CSS Grid</h2>
+          <p class="b-excerpt">In modern web design, creating clean and flexible layouts is very important. CSS Grid is a layout system that allows designers to create complex and responsive designs easily...</p>
+          <div class="b-meta">
+            <span class="meta-item">
+              ☐  Apr 03 2026
+            
+            </span>
+            <span class="meta-item">
+              ◷ 2 min read
+            </span>
+            
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 2 -->
+      <a href="https://medium.com/@sandalih48/the-art-and-science-of-web-designing-0e1b93ee1927"
+         target="_blank" rel="noopener" class="card blog-card fade">
+        <div class="blog-thumb">
+          <div class="blog-thumb-inner bt2">🖥️</div>
+          <span class="ext-btn" title="Open on Medium">↗</span>
+        </div>
+        <div class="blog-body">
+          <div class="tags">
+            <span class="tag">Web Design</span>
+            <span class="tag">UI/UX</span>
+          </div>
+          <h2 class="b-title">The Art and Science of Web Designing</h2>
+          <p class="b-excerpt">In today's digital world, web designing plays a crucial role in how people experience the internet. A well-designed website combines creativity, usability, and functionality...</p>
+          <div class="b-meta">
+            <span class="meta item">
+                ☐  Apr 01 2026
+              </span>
+              
+           
+            
+              <span class="meta-item">
+              ◷ 2 min read
+            </span>
+              
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 3 — no link -->
+      <div class="card blog-card fade">
+        <div class="blog-thumb">
+          <div class="blog-thumb-inner bt3">📋</div>
+        </div>
+        <div class="blog-body">
+          <div class="tags">
+            <span class="tag">Project Management</span>
+            <span class="tag">Teams</span>
+          </div>
+          <h2 class="b-title">Effective Project Management for Tech Teams</h2>
+          <p class="b-excerpt">Key principles and tools that help tech teams deliver projects on time...</p>
+          <div class="b-meta">
+            
+            
+              <span class="meta item">
+                ☐ Mar 10, 2026
+              </span>
+              
+            
+            <span class="meta-item">
+              ◷ 6 min read
+            </span>
+             
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="view-all fade">
+      <a href="https://medium.com/@sandalih48/the-art-and-science-of-web-designing-0e1b93ee1927"
+         target="_blank" rel="noopener">
+        View all posts on Medium →
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <span class="footer-logo">Sandali Bhagya<span style="color:var(--accent)">.</span></span>
+      <span class="footer-copy">© 2026 Sandali Bhagya. IN1601 Assignment.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
