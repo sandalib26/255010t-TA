@@ -195,11 +195,22 @@
     .ic-lbl { font-size: .65rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: .18rem; }
     .ic-val { font-size: .9rem; font-weight: 500; color: var(--text); }
 
-   /* FOOTER */
-    footer { padding: 3rem var(--px); border-top: 1px solid var(--border); text-align: center; margin-top: 5rem; }
-    .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.2rem; }
-    .footer-copy { display: block; font-size: .8rem; color: var(--muted); margin-top: .5rem; }
-
+   footer { 
+      border-top: 1px solid var(--border) !important; 
+      padding: 40px 0; 
+      margin-top: 40px; 
+      color: var(--muted) !important; 
+      text-align: center; 
+    }
+    
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .footer-logo { font-weight: bold; font-size: 1.1rem; }
+   
     
   </style>
 </head>
@@ -319,6 +330,8 @@
     </div>
   </div>
 </section>
+
+
 <footer>
   <div class="container">
     <div class="footer-inner">
@@ -327,8 +340,28 @@
     </div>
   </div>
 </footer>
-<script src="script.js"></script>
-  
 
+<script src="script.js"></script>
+
+<script>
+  const ham = document.getElementById('ham');
+  const drawer = document.getElementById('drawer');
+  ham.addEventListener('click', () => {
+    const open = drawer.classList.toggle('open');
+    ham.classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    drawer.classList.remove('open');
+    ham.classList.remove('open');
+    document.body.style.overflow = '';
+  }));
+
+  const io = new IntersectionObserver(
+    entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); io.unobserve(e.target); } }),
+    { threshold: 0.1 }
+  );
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
 </body>
 </html>
