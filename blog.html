@@ -55,11 +55,13 @@
       transform: translateY(-5px);
     }
 
-    nav { 
-      background: rgba(250,248,245,0.88) !important; 
-      border-bottom: 1px solid var(--border) !important; 
-    }
-    
+    /* NAV */
+    nav {
+      position: fixed; inset: 0 0 auto; z-index: 200;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.1rem var(--px); background: rgba(250,248,245,0.88);
+      backdrop-filter: blur(16px); border-bottom: 1px solid var(--border);}
+      
     .logo, .nav-links a, h1, h2, .b-title { color: var(--text) !important; }
     .logo span, .nav-links a.active { color: var(--accent) !important; }
     .pill { background: var(--accent-light) !important; color: var(--accent) !important; border: 1px solid var(--border) !important; }
